@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        body {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        #header {
+            color: green;
+            background: rgb(0, 170, 255);
+        }
+
+        #menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #menu li {
+            display: inline-block;
+        }
+
+        #menu li a {
+            color: rgb(0, 255, 64);
+            padding: 15px 10px;
+            display: block;
+        }
+
+        #menu li a:hover {
+            background: grey;
+        }
+
+        #logo {
+            font-size: 2rem;
+            margin-top: 5px;
+        }
+
+        .section {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+
+        .section h2.section-head {
+            color: rgb(128, 26, 0);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section h2.section-head:after {
+            background: rgb(0, 128, 66);
+            content: "";
+            display: block;
+            width: 100px;
+            height: 3px;
+            margin: 20px auto;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        #banner {
+            background: url("photos/farm.jpg") no-repeat 0 0;
+            background-size: cover;
+        }
+
+        banner-title p.lead {
+            color: rgb(0, 255, 64);
+            background: rgb(255, 0, 0);
+        }
+
+        .banner-title {
+            padding-top: 5rem;
+        }
+
+        .service-box {
+            text-align: center;
+        }
+
+        .service-box ion-icon {
+            color: red;
+            font-size: 70px;
+            margin-bottom: 15px;
+        }
+
+        #testimonials {
+            background: url("photos/WhatsApp\ Image\ 2024-04-13\ at\ 20.39.17_227a41da.jpg") no-repeat 0 0;
+            color: orchid;
+            background-size: cover;
+            padding: 50px 0;
+            position: relative;
+        }
+
+        #testimonials:before {
+            background: palegoldenrod;
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .testimonial img {
+            border-radius: 50px;
+        }
+
+        .testimonial p {
+            padding: 10px;
+        }
+
+        .testimonial img {
+            width: 100%;
+            height: 400px;
+        }
+
+        .testimonial .author {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .testimonial .author_company {
+            padding: 5px;
+            text-align: center;
+        }
+
+        .news-post img {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .news-post h3 {
+            font-size: 1.35rem;
+        }
+
+        .news-post h3 a {
+            color: yellowgreen;
+        }
+
+        .post-date {
+            font-size: 13px;
+            margin-bottom: 2px;
+        }
+
+        a.readmore {
+            font-size: 14px;
+            color: orangered;
+        }
+
+        .post-date ion-icon {
+            padding-left: 5px;
+            font-size: 15px;
+        }
+
+        .a.readmore ion-icon {
+            padding-left: 5px;
+            font-size: 15px;
+        }
+
+        .news-post img {
+            height: 200px;
+        }
+
+        #footer-sidebar {
+            color: peru;
+            background: rebeccapurple;
+            padding: 20px 0;
+        }
+
+        .footer-widget h4:after {
+            content: "";
+            background: cornflowerblue;
+            display: block;
+            width: 50px;
+            height: 2px;
+            margin: 5px 0;
+        }
+
+        .footer-widget a {
+            color: violet;
+        }
+
+        .latest-news {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .latest-news li {
+            margin-bottom: 3px;
+        }
+
+        .latest-news li ion-icon {
+            padding-right: 5px;
+        }
+
+        #footer {
+            color: red;
+            background: purple;
+            padding: 10px 0;
+        }
+
+        #social-icons {
+            list-style: none;
+            color: teal;
+            margin: 0;
+            padding: 0;
+        }
+
+        #social-icons li {
+            display: inline-block;
+            padding-left: 5px;
+        }
+
+        #social-icons li a {
+            color: red;
+            font-size: 23px;
+        }
+
+        @media (max-width: 768px) {
+            .testimonial {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            .footer-widget {
+                margin-bottom: 20px;
+            }
+
+            #footer {
+                text-align: center;
+            }
+
+            #social-icons {
+                margin-top: 10px;
+            }
+
+            #logo {
+                text-align: center;
+                margin-top: 10px 0;
+            }
+
+            #menu {
+                text-align: center;
+            }
+
+            .service-box {
+                margin-bottom: 30px;
+            }
+
+            .section {
+                padding-top: 40px;
+                padding-bottom: 40px;
+            }
+
+            .banner-title {
+                padding-top: 0;
+            }
+
+            .banner-title h1 {
+                font-size: 1.7rem;
+            }
+        }
+
+        @media (max-width:992px) {
+            .news-post {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 id="logo">THE NATURE'S WEEKEND HOME</h1>
+
+                </div>
+                <ul id="menu" class="float-md-right">
+                    <li>
+                        <a href="">HOME</a>
+                    </li>
+                    <li>
+                        <a href="">GALLERY</a>
+                    </li>
+                    <li>
+                        <a href="">ABOUT US</a>
+                    </li>
+                    <li>
+                        <a href="">REVIEWS</a>
+                    </li>
+                    <li>
+                        <a href="">CONTACT US</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="banner" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-lg-6">
+                    <div class="banner-title">
+                        <h1>
+                            <div class="title text-light">Experience The Nature</div>
+                        </h1>
+                        <p>
+                        <div class="lead text-white">Look deep into nature, and then you will understand everything
+                            better.
+                        </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- about us -->
+    <div class="container section">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="section-head">Amenities</h2>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="service-box">
+                    <ion-icon name="briefcase-outline"></ion-icon>
+                    <h3>Box Cricket</h3>
+                    <p>Where fields meet wickets, and hay bales become stumps - welcome to the world of Box Cricket,
+                        where rural charm meets sporting passion</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="service-box">
+                    <ion-icon name="basket-outline"></ion-icon>
+                    <h3>Swimming Pool</h3>
+                    <p>Dive into the deep end of relaxation and make a splash in your own personal paradise. Welcome to
+                        the swimmin' pool, where every stroke is a moment of serenity
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="service-box">
+                    <ion-icon name="briefcase-outline"></ion-icon>
+                    <h3>Selfie Point</h3>
+                    <p>Capture the moment, strike a pose, and let every click tell a story. Welcome to the selfie point,
+                        where memories are made one snapshot at a time</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="testimonials" class="section">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="section-head text-white">Testimonials</h2>
+            </div>
+
+            <div class="col-md-5">
+                <div class="testimonial ml-5">
+                    <p>Find solace in the embrace of nature, where the whispers of the wind and the rustle of leaves
+                        compose the sweetest melodies. Welcome to our farm villa, where tranquility meets luxury, and
+                        every moment feels like a cherished memory in the making</p>
+                    <img src="photos/farm.jpg" alt="">
+                    <div class="author">Hitesh Patil</div>
+                    <div class="author_company">CEO</div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="testimonial ml-5">
+                    <p>Where fields meet wickets, and hay bales become stumps - welcome to the world of Box Cricket,
+                        where rural charm meets sporting passion</p>
+
+                    <img src="photos/boxcricket evening.jpg" alt="">
+                    <div class="author">NEEL PATIL</div>
+                    <div class="author_company">CEO</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- news -->
+    <div id="news" class="container section">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="section-head">Recent News</h2>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="news-post">
+                    <img src="photos/boxcricket evening.jpg" alt="">
+                    <h3><a href="">News Heading Here</a></h3>
+                    <div class="post-date"> <ion-icon name="calendar-number-outline"></ion-icon> April 30,2020</div>
+                    <p>THE BIGGEST BOX CRICKET</p>
+                    <a href="" class="readmore">Read More <ion-icon name="chevron-forward-outline"></ion-icon></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="news-post">
+                    <img src="photos/pool.jpg" alt="">
+                    <h3><a href="">News Heading Here</a></h3>
+                    <div class="post-date"> <ion-icon name="calendar-number-outline"></ion-icon> April 30,2020</div>
+                    <p>POOL WITH THE BEST VIEW</p>
+                    <a href="" class="readmore">Read More <ion-icon name="chevron-forward-outline"></ion-icon></a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+                <div class="news-post">
+                    <img src="photos/VIEW.jpg" alt="">
+                    <h3><a href="">News Heading Here</a></h3>
+                    <div class="post-date"> <ion-icon name="calendar-numberoutline"></ion-icon> May 5,2021</div>
+                    <p>VINTAGE VIBES</p>
+                    <a href="" class="readmore">Read More <ion-icon name="chevron-forward-outline"></ion-icon></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="news-post">
+                    <img src="photos/WhatsApp Image 2024-04-13 at 20.39.17_227a41da.jpg" alt="">
+                    <h3><a href="">News Heading Here</a></h3>
+                    <div class="post-date"> <ion-icon name="calendar-numberoutline"></ion-icon> April 5,2021</div>
+                    <p>Aesthetics
+                    </p>
+                    <a href="" class="readmore">Read More <ion-icon name="chevron-forward-outline"></ion-icon></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div id="footer-sidebar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="footer-widget">
+                        <h4>About Company</h4>
+                        <p>THE NATURE'S WEEKEND HOME</p>
+                        <p>MATAR,KHEDA GUJARAT</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="footer-widget"></div>
+                    <h4>latest News</h4>
+                    <ul class="latest-news">
+                        <li>
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                            <a href="">Lorem ipsum dolor sit amet.</a>
+                        </li>
+                        <li>
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                            <a href="">Lorem ipsum dolor sit amet.</a>
+                        </li>
+                        <li>
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                            <a href="">Lorem ipsum dolor sit amet.</a>
+                        </li>
+                        <li>
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                            <a href="">Lorem ipsum dolor sit amet.</a>
+                        </li>
+                        <li>
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                            <a href="">Lorem ipsum dolor sit amet.</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="footer-widget">
+                        <h4>Company Address</h4>
+                        <address>
+                            <b>4 BHK VILLA</b><br>
+                            MATAR,KHEDA GUJARAT <br>
+                            <br>
+                            <br>
+                            P : 9824029263
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">Copyright@2023 A1</div>
+                <div class="col-md-6">
+                    <ul id="social-icons" class="float-md-right">
+                        <li><a href=""><ion-icon name="logo-facebook"></ion-icon></a></li>
+                        <li><a href=""><ion-icon name="logo-twitter"></ion-icon></a></li>
+                        <li><a href=""><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

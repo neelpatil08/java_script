@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Detect Browser Name and Version</title>
+</head>
+<body>
+    <script>
+    function getBrowserInformation() {
+        var info = "\n App Name: " + navigator.appName;
+           info += "\n App Version: " + navigator.appVersion;
+           info += "\n App Code Name: " + navigator.appCodeName;
+           info += "\n User Agent: " + navigator.userAgent;
+           info += "\n Platform: " + navigator.platform;
+    
+        alert("Here're the information related to your browser: " + info);
+    }
+    </script>
+     
+    <button type="button" onclick="getBrowserInformation();">Get Browser Information</button>
+</body>
+</html>
